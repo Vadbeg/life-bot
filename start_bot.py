@@ -3,7 +3,7 @@
 import logging
 import os
 
-from life_bot.bot.bot import LifeBotBuilder
+from life_bot.bot.bot_handler import LifeBotHandler
 
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO
@@ -11,5 +11,5 @@ logging.basicConfig(
 
 
 if __name__ == "__main__":
-    life_bot_builder = LifeBotBuilder(token=os.environ["TELEGRAM_TOKEN"])
-    life_bot_builder.start_bot()
+    life_bot_handler = LifeBotHandler(token=os.environ["TELEGRAM_TOKEN"])
+    life_bot_handler.start_bot()
